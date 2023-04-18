@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>currency Converter</title>
+</head>
+<body>
+    <h1>
+        CURRENCY CONVERTER</h1>
+    <div class="container">   
+        <div class="main">
+            <div class="form-group">
+                <label for="amount">AMOUNT TO CONVERT: </label>
+                <input type="text" class="searchBox" id="amount">
+            </div>
+            <div class="form-select">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">FROM</span>
+                    <select class="form-control from" id="sel1">
+                        <option value="">SELECT ONE …</option>
+                        <option value="USD">USD</option>
+                        <option value="INR">INR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+                <div class="button-to-exchange">
+                    <button class="exchange"><i class="fa fa-exchange" aria-hidden="true"></i></button>
+                </div>
+                <div class="input-group-prepend">
+                    <span class="input-group-text">TO</span>
+                    <select class="form-control to" id="sel2">
+                        <option value="">SELECT ONE …</option>
+                        <option value="USD">USD</option>
+                        <option value="INR">INR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+            </div>
+            <div class="button">
+                <div class="text-center">  
+                    <button class="btn btn-primary convert m-2" 
+                        type="submit">
+                        Convert
+                </button>
+                    <button class="btn btn-primary m-2" 
+                        onclick="clearVal()">
+                        Reset
+                    </button>
+                </div>
+            </div>
+            
+
+            <div id="finalAmount" class="text-center">
+
+                <h2>CONVERTED AMOUNT:
+                    <span class="finalValue" 
+                        style="color:white;">
+                    </span>
+                </h2>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </div>
+</body>
+</html>
